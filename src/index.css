@@ -161,7 +161,7 @@ img {
   min-height: 100vh;
 }
 a {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 .nav {
@@ -173,6 +173,7 @@ a {
 }
 .active {
   color: gold;
+  font-weight: bold;
 }
 .outlet {
   background-color: yellow;

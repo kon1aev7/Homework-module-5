@@ -3,6 +3,9 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Aim from "./components/NestedRoutes/Aim";
+import Company from "./components/NestedRoutes/Company";
+import Team from "./components/NestedRoutes/Team";
 
 const App = () => {
   return (
@@ -10,7 +13,15 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* localhost/about/aim */}
+        {/* localhost/about/company */}
+        {/* localhost/about/team */}
+        <Route path="/about" element={<About />}>
+          <Route path="aim" element={<Aim />} />
+          <Route path="company" element={<Company />} />
+          <Route path="team" element={<Team />} />
+        </Route>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
