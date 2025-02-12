@@ -7,12 +7,3 @@ export const fetchUsers = async () => {
   return data.users;
 };
 
-export const fetchUserById = async (userId) => {
-  const { data } = await axios.get(`users/${userId}`);
-  return data;
-};
-
-export const fetchPostsByUserId = async (userId) => {
-  const { data } = await axios.get(`/posts/user/${userId}`);
-  return data.posts;
-};

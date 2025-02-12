@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
-import Aim from "./components/NestedRoutes/Aim";
-import Company from "./components/NestedRoutes/Company";
-import Team from "./components/NestedRoutes/Team";
+import Header from "../components/Header/Header";
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+import About from "../pages/About";
+import Aim from "./NestedRoutes/Aim";
+import Company from "./NestedRoutes/Company";
+import Team from "./NestedRoutes/Team";
 
 const App = () => {
   return (
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="team" element={<Team />} />
         </Route>
 
+        <Route path="/users" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
