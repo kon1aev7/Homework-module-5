@@ -26,6 +26,7 @@ const App = () => {
         </Route>
 
         <Route path="/users" element={<Users />} />
+
         <Route path="/users/:userId" element={<UserDetails />}>
           <Route path="info" element={<h2>Info about user</h2>} />
           <Route path="posts" element={<UserPosts />} />
